@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>PHP Test</title>
+    <form><legend><strong>CALCULAR NOTA</strong></legend>
+    <label><input type="texto" name="nota" /></label>
+    <input type="submit" value="Validar" />
+    </form>
+  </head>
+  <body>
+    <?php 
+    echo '<p>Entre com sua nota.</p>'; 
+    $nota = $_GET["nota"];
+
+    if ($nota >= 7)
+    {
+      echo "Passaste na disciplina, parabéns!";
+    }
+    else if($nota < 7 && $nota >= 5)
+    {
+      echo "Não fostes bem, está na final!";
+    }
+    else
+    {
+      echo "Fostes reprovado até que se prove o contrário!";
+    }
+    
+    
+    ?> 
+  </body>
+</html>
