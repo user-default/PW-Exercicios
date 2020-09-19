@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>PHP Test</title>
+  </head>
+  <body>
+    <form>
+    <legend> CAIXA 24 HORAS<br><br>OPÇÕES: 1.SAQUE, 2.TRANSFERENCIA, 3.DEPOSITO<br><br></legend>
+    <label>OPÇÃO: <input type="text" name="opção" /> </label>
+    <input type="submit" value="Confirma" />
+    </form>
+    <?php
+      $op = $_GET["opção"];
+
+      switch($op)
+      {
+        case 1:
+          echo "Digite o valor que será sacado:<br>";
+          break;
+        case 2:
+          echo "Insira o envelope com o valor e digite OK:<br>";
+          break;
+        case 3:
+          echo "Digite Agência e conta a qual você deseja transferir, em seguida digite o valor:<br>";
+          break;
+        default:
+          if($op == 0)
+            echo "Aguardando resposta do usuário<br>";
+      }
+    ?> 
+  </body>
+</html>
