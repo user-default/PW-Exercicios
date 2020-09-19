@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>PHP Test</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Conversor de segundos</legend>
+        <label>
+          Digite os segundos:
+          <input type="text" name="segundos" />
+        </label>
+        <input type="submit" value="Calcular" />
+      </fieldset>
+    </form>
+    <?PHP
+      
+      $seg = $_GET['segundos'];
+      if($seg != 0) 
+      {
+        $dias = (int)($seg / 86400);
+        $horas = (int)($seg / 3600);
+        $minutos = (int)($seg / 60);
+
+        echo $dias . " dia(s)<br>";
+        echo $horas . " hora(s)<br>";
+        echo $minutos . " minuto(s)<br>";
+        echo $seg . " segundo(s)<br>";
+      }
+
+      ?>
+  </body>
+</html>
